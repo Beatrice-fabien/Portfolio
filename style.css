@@ -1,77 +1,111 @@
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #f4f4f4;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background: #f2f5ff;
-  color: #222;
-}
-
+/* ----- En-tête fixe ----- */
 header {
-  background: linear-gradient(90deg, #4c3aff, #00c3ff);
-  padding: 15px;
-  text-align: center;
-  color: white;
-  position: fixed;
+  position: fixed;          /* reste visible même quand on défile */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav button {
-  background: white;
-  border: none;
-  padding: 10px 16px;
-  margin: 5px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-nav button:hover {
-  background: #e3e6ff;
-}
-
-main {
-  margin-top: 100px; /* pour compenser le header fixe */
-}
-
-main section {
-  padding: 60px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h2 {
-  margin-bottom: 15px;
-  color: rgb(50,50,90);
-}
-
-p, li {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-ul {
-  list-style: none;
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  background: rgb(20,20,50);
+  background-color: #004080;
   color: white;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 1000;            /* reste au-dessus du contenu */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* On ajoute un espace en haut du contenu pour ne pas cacher les contacts */
+main {
+  padding-top: 100px;
+}
+
+/* ----- Liste de contacts ----- */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile-pic {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.contact-info h2 {
+  margin: 0 0 10px;
+}
+
+/* ----- Bannière finale ----- */
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+/* Style général des photos de profil */
+.profile-pic {
+  width: 90px;           
+  height: 90px;          
+  object-fit: cover;     
+  border-radius: 50%;    
+  border: 3px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin-right: 15px;    
+}
+
+/* Organisation du contact */
+.contact-card {
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Texte du contact */
+.contact-info h2 {
+  margin: 0;
+  font-size: 1.2em;
 }
